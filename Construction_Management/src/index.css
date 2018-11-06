@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #f1f1f1;
+ 
+}
+.inputGroup{
+  display: inline-flex;
+  margin:auto;
+
+  
+}
+.large-box {
+  height: 500px ;
+  width: 1000px;
+  float: left;
+  background-color: #f1f1f1 ;
+  padding-top: 100px;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+.capital-project{
+  height: 300px ;
+  width: 300px;
+  float: left;
+  background-color: #ffffff ;
+}
+.project-schedule{
+  height: 300px ;
+  width: 300px;
+  float: left;
+  background-color: #ffffff ;
+  margin-left: 45px;
+
+}
+.schedule-task-risk{
+  height: 300px ;
+  width: 300px;
+  float: right;
+  background-color: #ffffff ;
+  margin-left: 30px;
+}
+.header {
+  overflow: hidden;
+  background-color: #ffffff ;
+  padding: 20px 10px;
+}
+
+.header-right {
+  float: right;
+}
+h2 {
+    float: left;
+    display: block;
+    text-align: left;
+  }
+input{
+  width:35px;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid rgb(172, 156, 156);
+  color: gray;
+  opacity: 0.6;
+  border-radius: 5px;
+  letter-spacing: 0.1em;
+  font-style: italic;
+}
+span{
+  width: 20px;
+ font-size: 30px;
+ font-style: bold;
+ 
+}
+button{
+  margin: 20px;
+  padding: 10px;
+  width: 70px;
+  border-radius: 5px;
+  border:none;
+  letter-spacing: 0.1em;
+  color:white;  
+}
+
+.reset{
+  background: linear-gradient(top, #49c0f0, #2CAFE3);
+}
+.stop{
+  background: linear-gradient(top, #f62b2b, #d20202);
+}
+
+.start{
+  background: linear-gradient(top, #4ba614, #008c00);
+}
+
+.share {
+  font-weight: bold;
+  position: relative;
+}
+.share:before {
+  content: ".";
+  font-size: 2.2em;
+  position: absolute;
+  bottom: -2.5px;
+  left: -4px;
+}
+.share:after {
+  content: ":";
+  font-size: 2em;
+  position: absolute;
+  bottom: -6px;
+  right: -7px;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #050505;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
