@@ -5,12 +5,58 @@ import Track from './components/capitalProject';
 import ScheduleTaskRisk from './components/scheduleTaskRisk';
 import ProjectSchedule from './components/projectSchedule';
 import './index.css';
+import axios from 'axios';
+
+
 
 
 
 class App extends Component {
- 
+
+  state ={
+    post:[]
+  }
+
+
+  componentDidMount(){
+    axios.get("https://jsonplaceholder.typicode.com/todos").then((res)=>{
+      const posts= res.data.slice(0,4);
+      const updatedPosts = posts.map(post =>{
+        return{
+          ...post,
+          total:23,
+         
+        }
+      });
+      this.setState({post: updatedPosts});
+      console.log(res);
+    });
+    }
+
+    
   render() {
+   //const array = [];
+
+    const posts = this.state.post.map(post => {
+    //console.log(post);
+    //array.push(post);
+    return <Track  key ={post.id} title = {post.title}  total={post.total} psviz="100" completed="59" Total1="30" incomplete="100"/>
+  
+    })
+/*
+    console.log(array);
+    Array.prototype.sum = function (prop) {
+      var total = 0
+      for ( var i = 0, _len = this.length; i < _len; i++ ) {
+          total += this[i][prop]
+      }
+      return total
+  }
+  console.log(array);
+  console.log(array.sum("total"))*/
+
+ 
+
     return (
       <div className="construction-management">
        <div className ="menu">
@@ -34,7 +80,8 @@ class App extends Component {
         </div>
        </div>
        		<div class="row">
-          <Track total="55.14" cpviz="100" completed="59" inprogress="30" active="100" draft="47"/> 
+           {posts}
+          {/* <Track total =  {array.sum("total")}/>*/}
           <ProjectSchedule total="66.6" psviz="100" completed="59" Total1="30" incomplete="100"/>
           <ScheduleTaskRisk total="66.66" totaltask="3000" ontrack="100" red="30"/>
            </div>
